@@ -1,0 +1,25 @@
+{
+  "name": "curli-telegram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raidenShadow/curli-telegram-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raidenShadow/curli-telegram-bot/issues"
+  },
+  "homepage": "https://github.com/raidenShadow/curli-telegram-bot#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1",
+    "telegraf": "^3.38.0",
+    "validator": "^13.1.17"
+  }
+}
