@@ -4,9 +4,10 @@ const fetch = require("node-fetch");
 require('dotenv').config()
 
 const shorten = async function (inputLink) {
+    console.log(inputLink)
     if (validator.isURL(inputLink)){
         console.log('the reply is url')
-        const response = await fetch('https://www.dumas.ir/shortener', {
+        const response = await fetch('https://curli.ir/shortener', {
             method: 'post',
             body: JSON.stringify({
                 link: inputLink
@@ -18,7 +19,7 @@ const shorten = async function (inputLink) {
         })
         const result = await response.json()
         console.log(result.shortLink)
-        return  'here\'s your link : ' + 'https://dumas.ir/' + result.shortLink
+        return  'here\'s your link : ' + 'https://curli.ir/' + result.shortLink
     } else {
         console.log('the reply is NOT url')
         return 'send a valid URL'
@@ -30,6 +31,7 @@ bot.start((ctx) => {
 })
 bot.on('message', async (ctx) => {
     ctx.reply(await shorten(ctx.update.message.text))
+    console.log(ctx)
 })
 bot.launch()
 
